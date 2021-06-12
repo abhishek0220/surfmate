@@ -41,7 +41,7 @@ jobs:
       run: |
         python -m venv venv
         source venv/bin/activate
-        ${{ GOOGLE_AUTOML}} > key.json
+        ${{ secrets.GOOGLE_AUTOML}} > key.json
 
     - name: 'Install dependencies'
       run: pip install -r requirements.txt
