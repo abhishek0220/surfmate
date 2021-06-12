@@ -31,7 +31,7 @@ jobs:
       - name: Install Dependencies
         run: |
           pip install mypy
-          pin install flake8
+          pip install flake8
       - name: mypy
         run: mypy ./
       - name: flake8
