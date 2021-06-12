@@ -15,11 +15,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: 'Append Secret'
-      run: 'echo "$AUTOML" > key.json'
-      shell: bash
-      env:
-        AUTOML: ${{secrets.GOOGLE_AUTOML}}
+    - name: 'Create Env File'
+        run: 'echo "$ENV_STR" > .env'
+        shell: bash
+        env:
+          ENV_STR: ${{secrets.ENV_FILE}}
+    - name: 'Create Google Token File'
+        run: 'echo "$AUTOML" > key.json'
+        shell: bash
+        env:
+          AUTOML: ${{secrets.GOOGLE_AUTOML}}
     - name: Set up Python version
       uses: actions/setup-python@v1
       with:

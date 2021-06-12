@@ -1,10 +1,21 @@
 import os
 import uuid
+import requests
+from dotenv import load_dotenv
 from flask import Flask, render_template, request
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 
 from utils.image_classification import get_prediction
 
+load_dotenv()
 app = Flask(__name__)
+
+limiter = Limiter(
+    app,
+    key_func=get_remote_address,
+    default_limits=["1 per second"]
+)
 
 
 @app.route('/')
@@ -13,7 +24,7 @@ def index():
 
 
 @app.route('/ClassifyImage/', methods=['GET', 'POST'])
-def classify_image() -> str:
+def classify_image():
     if request.method == 'GET':
         return render_template('select_img.html')
     if request.method == 'POST':
@@ -25,7 +36,26 @@ def classify_image() -> str:
         os.remove(save_path)
         resp = get_prediction(img_b64)
         return resp
-    return "Method Not Allowed"
+
+
+@app.route('/NearbyBeaches/', methods=['GET', 'POST'])
+def beaches():
+    if request.method == 'GET':
+        return render_template('beaches.html')
+    if request.method == 'POST':
+        lat = request.form['latitude']
+        lon = request.form['longitude']
+        endpoint = "https://atlas.microsoft.com/search/nearby/json"
+        params = {
+            'api-version': '1.0',
+            'subscription-key': os.environ["AZURE_MAP_KEY"],
+            'categorySet': '9357',
+            'lat': lat,
+            'lon': lon,
+        }
+        url = endpoint
+        resp = requests.get(url, params)
+        return resp.json()
 
 
 if __name__ == '__main__':
