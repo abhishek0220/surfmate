@@ -49,29 +49,14 @@
       {% if not resp %}
       <div id="container">
     <video autoplay="true" id="videoElement"></video>
+      <canvas id="canvas" style="display: none;"></canvas>
+      <button onclick="take_pic()" style="position: absolute; z-index: 100;">Capture</button>
 </div>
-<script>
 
-var video = document.querySelector("#videoElement");
- 
-navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
- 
-if (navigator.getUserMedia) {       
-    navigator.getUserMedia({video: true}, handleVideo, videoError);
-}
- 
-function handleVideo(stream) {
-    video.src = window.URL.createObjectURL(stream);
-}
- 
-function videoError(e) {
-    // do something
-}
- 
-</script>
-        <form method="post" enctype="multipart/form-data">
+        <form method="post" enctype="multipart/form-data" id="mform">
         <label for="image">Select Image</label>
-        <input name="image" id="image" type="file" accept="image/*" required>
+        <input name="image" id="image" type="file" accept="image/*">
+            <input name="cap-img" id="cap-img" type="text" hidden>
         <br>
         <button type="submit">Classify</button>
       </form>
@@ -80,7 +65,29 @@ function videoError(e) {
       {% endif %}
     </div>
   </section>
+<script>
+var video = document.querySelector("#videoElement");
+  if (navigator.mediaDevices.getUserMedia) {
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(function (stream) {
+      video.srcObject = stream;
+    })
+    .catch(function (err0r) {
+      console.log("Something went wrong!");
+    });
+  }
+ function take_pic() {
+      console.log("dfddddddd")
+    var canvas = document.getElementById('canvas');
+    var video = document.getElementById('videoElement');
 
+    canvas.width = 200;
+    canvas.height = 200;
+    canvas.getContext('2d').drawImage(video, 0, 0, 200,200);
+    document.getElementById('cap-img').value = canvas.toDataURL();
+    document.getElementById('mform').submit();
+  }
+</script>
 
 
 <footer class="u-clearfix u-footer u-gradient u-footer" id="sec-ea37">

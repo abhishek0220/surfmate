@@ -1,3 +1,4 @@
+import base64
 import os
 import uuid
 import requests
@@ -39,12 +40,17 @@ def classify_image():
     if request.method == 'GET':
         return render_template('select_img.html')
     if request.method == 'POST':
-        img = request.files['image']
-        save_path = os.path.join(os.getcwd(), str(uuid.uuid4()))
-        img.save(save_path)
-        with open(save_path, 'rb') as img_file:
-            img_b64 = img_file.read()
-        os.remove(save_path)
+        img_other = request.form.get('cap-img')
+        if img_other is not None:
+            header, img_b64 = img_other.split(',')
+            img_b64 = base64.b64decode(img_b64)
+        else:
+            img = request.files['image']
+            save_path = os.path.join(os.getcwd(), str(uuid.uuid4()))
+            img.save(save_path)
+            with open(save_path, 'rb') as img_file:
+                img_b64 = img_file.read()
+            os.remove(save_path)
         resp = get_prediction(img_b64)
         return render_template('select_img.html', resp=resp)
 
