@@ -1,11 +1,12 @@
 # SURFMATE #
 <br><br>
 
+
+![1_Cropped (1)](https://user-images.githubusercontent.com/60786451/121808514-838a0580-cc76-11eb-93de-3f223782e3aa.png)
+
 ## Inspiration
 Social distancing has been the most important factor to avoid spread of the virus in these pandemic times. The crowd density feature will enable the user to decide if it is a wise choice to visit the beach and go surfing or not. Also, Instead of having multiple apps for different functionalities, we want it to be a one-stop solution so that it can cover all the necessary needs - from finding restaurants and nearby beaches, calling for a lifeguard or an ambulance, or to clean up the beach a little after surfing - everything in one app!
-![1_Cropped (1)](https://user-images.githubusercontent.com/60786451/121808514-838a0580-cc76-11eb-93de-3f223782e3aa.png)
 ![5_Cropped](https://user-images.githubusercontent.com/60786451/121808570-b207e080-cc76-11eb-8b3b-6d2105ea8a61.png)
-
 
 ## What it does
 It provides five main functionalities :
@@ -23,7 +24,8 @@ It provides five main functionalities :
 We used HTML,CSS,JS for the frontend of our Web App. Designed a beautiful interface using Canva. Created our prototype using Figma. Used Bootstrap and nicepage for templates and inspiration. Trained and implemented a classification model. Used Flask for a solid backend. Used Azure App services for hosting. We used the Google cloud platform's Dialogflow to make a powerful chatbot 
 
 ![3_Cropped](https://user-images.githubusercontent.com/60786451/121808545-9dc3e380-cc76-11eb-8d0c-791e032541b8.png)
-![Uploading 4_Cropped.png…]()
+![4_Cropped](https://user-images.githubusercontent.com/60786451/121808738-90f3bf80-cc77-11eb-9ec2-c658982587af.png)
+
 
 
 ## Challenges we ran into
@@ -31,6 +33,12 @@ We were not able to fully integrate backend and frontend causing few functionali
 
 ##Accomplishments we are proud of
 We were able to successfully identify and classify any given object if its recyclable or not. We were also successfully able to integrate the chatbot into the website.
+![1](https://user-images.githubusercontent.com/60786451/121808772-bda7d700-cc77-11eb-9e99-eab877dd615e.JPG)
+
+![2](https://user-images.githubusercontent.com/60786451/121808773-be406d80-cc77-11eb-8f5b-7117594ad6a7.JPG)
+
+![3](https://user-images.githubusercontent.com/60786451/121808771-bc76aa00-cc77-11eb-8a52-a96cdd006011.JPG)
+
 
 ##What we learnt
 We learnt how we can use azure and google cloud to build and integrate into frontend of a web-app and also learnt how we can estimate the crowd density at a place.
