@@ -25,12 +25,6 @@ jobs:
       shell: bash
       env:
         AUTOML: ${{secrets.GOOGLE_AUTOML}}
-    - name: Upload Assets To Azure Blob Storage
-      uses: bacongobbler/azure-blob-storage-upload@v1.0.0
-      with:
-        source_dir: static
-        container_name: static
-        connection_string: ${{ secrets.BLOB_STORAGE_CONNECTION_STRING }}
     - name: Set up Python version
       uses: actions/setup-python@v1
       with:

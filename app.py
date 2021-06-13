@@ -11,6 +11,7 @@ from utils.image_classification import get_prediction
 load_dotenv()
 app = Flask(__name__)
 
+
 limiter = Limiter(
     app,
     key_func=get_remote_address
