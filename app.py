@@ -3,7 +3,7 @@ import os
 import uuid
 import requests
 from dotenv import load_dotenv
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 
@@ -32,6 +32,11 @@ def features():
 @app.route('/Chat/')
 def chat():
     return render_template('chat.html')
+
+
+@app.errorhandler(404)
+def not_found(e):
+    return redirect(url_for('index'))
 
 
 @app.route('/ClassifyImage/', methods=['GET', 'POST'])
