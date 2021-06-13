@@ -46,7 +46,7 @@ def classify_image():
             img_b64 = img_file.read()
         os.remove(save_path)
         resp = get_prediction(img_b64)
-        return resp
+        return render_template('select_img.html', resp=resp)
 
 
 @app.route('/NearbyBeaches/', methods=['GET', 'POST'])

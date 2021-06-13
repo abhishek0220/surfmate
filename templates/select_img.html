@@ -32,12 +32,16 @@
     {% include 'header.html' %}
     <section class="u-align-left u-clearfix u-gradient u-section-1" id="sec-6c66">
     <div class="u-clearfix u-sheet u-sheet-1">
-      <form method="post" enctype="multipart/form-data">
+      {% if not resp %}
+        <form method="post" enctype="multipart/form-data">
         <label for="image">Select Image</label>
         <input name="image" id="image" type="file" accept="image/*" required>
         <br>
         <button type="submit">Classify</button>
       </form>
+      {% else %}
+          {{ resp }}
+      {% endif %}
     </div>
   </section>
 
