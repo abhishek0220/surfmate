@@ -31,8 +31,7 @@ We used HTML,CSS,JS for the frontend of our Web App. Designed a beautiful interf
 ## Challenges we ran into
 We were not able to fully integrate backend and frontend causing few functionalities to perform abnormally and increasing the overall loading time of the website.
 
-##Accomplishments we are proud of
-We were able to successfully identify and classify any given object if its recyclable or not. We were also successfully able to integrate the chatbot into the website.
+
 ![1](https://user-images.githubusercontent.com/60786451/121808772-bda7d700-cc77-11eb-9e99-eab877dd615e.JPG)
 
 ![2](https://user-images.githubusercontent.com/60786451/121808773-be406d80-cc77-11eb-8f5b-7117594ad6a7.JPG)
@@ -40,7 +39,7 @@ We were able to successfully identify and classify any given object if its recyc
 ![3](https://user-images.githubusercontent.com/60786451/121808771-bc76aa00-cc77-11eb-8a52-a96cdd006011.JPG)
 
 
-##What we learnt
+## What we learnt
 We learnt how we can use azure and google cloud to build and integrate into frontend of a web-app and also learnt how we can estimate the crowd density at a place.
 <br><br>
 ![PicApp_-_Samsung_Galaxy_S81](https://user-images.githubusercontent.com/60786451/121808681-5a1da980-cc77-11eb-8f70-82fcf18cd8bf.png)<br>
