@@ -42,9 +42,10 @@ We were able to successfully identify and classify any given object if its recyc
 
 ##What we learnt
 We learnt how we can use azure and google cloud to build and integrate into frontend of a web-app and also learnt how we can estimate the crowd density at a place.
-![PicApp_-_Samsung_Galaxy_S81](https://user-images.githubusercontent.com/60786451/121808681-5a1da980-cc77-11eb-8f70-82fcf18cd8bf.png)
-![PicApp_-_Samsung_Galaxy_S82](https://user-images.githubusercontent.com/60786451/121808683-5be76d00-cc77-11eb-870c-b40d70db6edf.png)
-![PicApp_-_Samsung_Galaxy_S8](https://user-images.githubusercontent.com/60786451/121808684-5c800380-cc77-11eb-9ed1-93ef4b5a3f41.png)
+<br><br>
+![PicApp_-_Samsung_Galaxy_S81](https://user-images.githubusercontent.com/60786451/121808681-5a1da980-cc77-11eb-8f70-82fcf18cd8bf.png)<br>
+![PicApp_-_Samsung_Galaxy_S82](https://user-images.githubusercontent.com/60786451/121808683-5be76d00-cc77-11eb-870c-b40d70db6edf.png)<br>
+![PicApp_-_Samsung_Galaxy_S8](https://user-images.githubusercontent.com/60786451/121808684-5c800380-cc77-11eb-9ed1-93ef4b5a3f41.png)<br>
 
 
 ## What's next for Surfmate
