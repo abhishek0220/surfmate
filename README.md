@@ -24,13 +24,12 @@ It provides five main functionalities :
 We used HTML,CSS,JS for the frontend of our Web App. Designed a beautiful interface using Canva. Created our prototype using Figma. Used Bootstrap and nicepage for templates and inspiration. Trained and implemented a classification model. Used Flask for a solid backend. Used Azure App services for hosting. We used the Google cloud platform's Dialogflow to make a powerful chatbot 
 
 ![3_Cropped](https://user-images.githubusercontent.com/60786451/121808545-9dc3e380-cc76-11eb-8d0c-791e032541b8.png)
-![4_Cropped](https://user-images.githubusercontent.com/60786451/121808738-90f3bf80-cc77-11eb-9ec2-c658982587af.png)
-
 
 
 ## Challenges we ran into
 We were not able to fully integrate backend and frontend causing few functionalities to perform abnormally and increasing the overall loading time of the website.
 
+![4_Cropped](https://user-images.githubusercontent.com/60786451/121808738-90f3bf80-cc77-11eb-9ec2-c658982587af.png)
 
 ![1](https://user-images.githubusercontent.com/60786451/121808772-bda7d700-cc77-11eb-9e99-eab877dd615e.JPG)
 
