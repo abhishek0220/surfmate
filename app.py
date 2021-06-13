@@ -67,7 +67,7 @@ def beaches():
         }
         url = endpoint
         resp = requests.get(url, params)
-        return resp.json()
+        return render_template('beaches.html', resp=resp.json())
 
 
 if __name__ == '__main__':

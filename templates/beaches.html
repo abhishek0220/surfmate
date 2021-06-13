@@ -13,7 +13,49 @@
   <script class="u-script" type="text/javascript" src="{{ url_for('static', filename = 'js/jquery-1.9.1.min.js') }}" defer=""></script>
   <script class="u-script" type="text/javascript" src="{{ url_for('static', filename = 'js/nicepage.js') }}" defer=""></script>
   <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <style>
+* {
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+</style>
 
   <script type="application/ld+json">
     {
@@ -33,29 +75,38 @@
   <section class="u-align-left u-clearfix u-gradient u-section-1" id="sec-6c66">
     <div class="u-clearfix u-sheet u-sheet-1">
       <h2 class="u-text u-text-custom-color-6 u-text-1">Beaches near you </h2>
-      <div class="u-form u-form-1">
-        <form method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px">
-          <input type="hidden" id="siteId" name="siteId" value="450654">
-          <input type="hidden" id="pageId" name="pageId" value="451470">
-          <div class="u-form-group u-form-name">
-            <label for="name-ccf1" class="u-label u-text-custom-color-6">longitude:</label>
-            <input type="text" placeholder="Enter longitude" id="name-ccf1" name="longitude" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="" autofocus="autofocus">
-          </div>
+      {% if not resp %}
+        <div class="u-form u-form-1">
+        <form action="{{ url_for('beaches') }}" method="post" style="padding: 10px">
           <div class="u-form-email u-form-group">
-            <label for="email-ccf1" class="u-label u-text-custom-color-6">Latitude:</label>
-            <input type="email" placeholder="Enter Latitude" id="email-ccf1" name="latitude" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+            <label for="latitude" class="u-label u-text-custom-color-6">Latitude:</label>
+            <input type="text" placeholder="Enter Latitude" value="18.921953" id="latitude" name="latitude" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+          </div>
+            <div class="u-form-group u-form-name">
+            <label for="longitude" class="u-label u-text-custom-color-6">longitude:</label>
+            <input type="text" placeholder="Enter longitude" value="72.831439" id="longitude" name="longitude" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="" autofocus="autofocus">
           </div>
           <div class="u-align-center u-form-group u-form-submit">
-            <a href="#" class="u-border-2 u-border-black u-btn u-btn-submit u-button-style u-custom-color-2 u-hover-custom-color-6 u-text-black u-text-hover-white u-btn-1">Submit</a>
-            <input type="submit" value="submit" class="u-form-control-hidden">
+            <button class="u-border-2 u-border-black u-btn u-btn-submit u-button-style u-custom-color-2 u-hover-custom-color-6 u-text-black u-text-hover-white u-btn-1" type="submit">Classify</button>
           </div>
-          <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
-          <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
-          <input type="hidden" value="" name="recaptchaResponse">
         </form>
       </div>
       <img class="u-image u-image-default u-image-1" src="{{ url_for('static', filename='images/g6606db1c3a4b16ecb0191ea5c220b69bd6aecb88e5e2954bfde614295b7b173d1104353d0d8880b493a0af8ecbe12829_1280.jpg') }}" alt="" data-image-width="1280" data-image-height="853"
         data-animation-name="fadeIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down">
+     {% else %}
+          <div class="row" style="margin-top: 40px">
+          {% for i in resp['results'] %}
+              <div class="column">
+                <div class="card">
+                  <h3>{{ i['poi']['name'] }}</h3>
+                  <p>{{ i['address']['freeformAddress']}}</p>
+                </div>
+              </div>
+
+          {% endfor %}
+          </div>
+     {% endif %}
+
     </div>
   </section>
 
@@ -110,6 +161,23 @@
       </div>
     </div>
   </footer>
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+    document.getElementById('latitude').value = position.coords.latitude;
+    document.getElementById('longitude').value = position.coords.longitude;
+}
+//getLocation();
+</script>
 </body>
 
 </html>
