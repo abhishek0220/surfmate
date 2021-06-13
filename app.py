@@ -41,7 +41,7 @@ def classify_image():
         return render_template('select_img.html')
     if request.method == 'POST':
         img_other = request.form.get('cap-img')
-        if img_other is not None:
+        if img_other != '':
             header, img_b64 = img_other.split(',')
             img_b64 = base64.b64decode(img_b64)
         else:
