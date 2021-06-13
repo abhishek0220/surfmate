@@ -1,10 +1,302 @@
-<html>
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en">
+
 <head>
-    <title>Surfs Up Hacks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="keywords" content="Surf-Mate, About-">
+  <meta name="description" content="">
+  <meta name="page_type" content="np-template-header-footer-from-plugin">
+  <title>Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/nicepage.css') }}" media="screen">
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/home.css') }}" media="screen">
+  <script class="u-script" type="text/javascript" src="{{ url_for('static', filename = 'js/jquery-1.9.1.min.js') }}" defer=""></script>
+  <script class="u-script" type="text/javascript" src="{{ url_for('static', filename = 'js/nicepage.js') }}" defer=""></script>
+  <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "SurfMate",
+      "sameAs": []
+    }
+  </script>
+  <meta property="og:title" content="Home">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0d13c3">
 </head>
-<body>
-    <h3>Surfs Up Hacks</h3>
-    <a href="{{ url_for('classify_image') }}"> Classify IMG</a><br>
-    <a href="{{ url_for('beaches') }}"> Get Nearby Beaches</a>
+
+<body data-home-page="https://surfmate.nicepage.io/Home.html?version=48cfb23e-a0d6-40b3-9b70-8a063347b552" data-home-page-title="Home" class="u-body">
+  {% include "header.html" %}
+  <section class="u-clearfix u-gradient u-section-1" id="sec-a490">
+    <div class="u-clearfix u-sheet u-valign-bottom u-sheet-1">
+      <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+        <div class="u-layout" style="">
+          <div class="u-layout-row" style="">
+            <div class="u-align-left u-container-style u-gradient u-layout-cell u-left-cell u-size-60 u-size-xs-60 u-layout-cell-1" src="">
+              <div class="u-container-layout u-container-layout-1">
+                <h2 class="u-text u-text-custom-color-6 u-text-1">SurfMate</h2>
+                <p class="u-text u-text-custom-color-7 u-text-2">Your beach companion. Our entry to the MLH hackathon "Surfs Up Hacks" 2021</p>
+                <a href="{{ url_for('features') }}" data-page-id="450977" class="u-btn u-btn-round u-button-style u-custom-color-2 u-hover-custom-color-6 u-radius-50 u-btn-1">Continue to Web-App&nbsp;<span class="u-icon u-icon-1"><svg class="u-svg-content"
+                      viewBox="0 0 492.004 492.004" x="0px" y="0px" style="width: 1em; height: 1em;">
+                      <g>
+                        <g>
+                          <path
+                            d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z">
+                          </path>
+                        </g>
+                      </g>
+                    </svg><img></span>&nbsp;&nbsp;
+                </a>
+                <a href="Home.html#sec-9bc7" data-page-id="450655" class="u-btn u-btn-round u-button-style u-custom-color-2 u-hover-custom-color-6 u-radius-50 u-btn-2">Learn More&nbsp;<span class="u-icon"><svg class="u-svg-content"
+                      viewBox="0 0 30.727 30.727" x="0px" y="0px" style="width: 1em; height: 1em;">
+                      <path d="M29.994,10.183L15.363,24.812L0.733,10.184c-0.977-0.978-0.977-2.561,0-3.536c0.977-0.977,2.559-0.976,3.536,0   l11.095,11.093L26.461,6.647c0.977-0.976,2.559-0.976,3.535,0C30.971,7.624,30.971,9.206,29.994,10.183z"></path>
+                    </svg><img></span>
+                </a>
+                <img class="u-image u-image-default u-image-1" src="{{ url_for('static', filename = 'images/PicApp-SamsungGalaxyS8.png') }}" alt="" data-image-width="231" data-image-height="530">
+                <img class="u-image u-image-default u-image-2" src="{{ url_for('static', filename = 'images/PicApp-SamsungGalaxyS81.png') }}" alt="" data-image-width="231" data-image-height="530">
+                <img class="u-image u-image-default u-image-3" src="{{ url_for('static', filename = 'images/PicApp-SamsungGalaxyS82.png') }}" alt="" data-image-width="231" data-image-height="530">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="u-clearfix u-gradient u-section-2" id="sec-9bc7">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <div class="fr-view u-align-center u-clearfix u-rich-text u-text u-text-1">
+        <h1 style="text-align: left;">
+          <span class="u-text-custom-color-6">
+            <span style="letter-spacing: 5px;">About-</span>
+          </span>
+        </h1>
+        <p>
+          <br>
+        </p>
+        <p style="text-align: left;">
+          <span style="line-height: 2.0;">
+            <span style="letter-spacing: 1px; font-weight: 700;">
+              <span class="u-text-custom-color-6">SurfMate</span>
+            </span>
+          </span>
+          <span style="line-height: 2.0;">
+            <span style="letter-spacing: 1px;">
+              <span class="u-text-custom-color-8"> is a multi-purpose companion app that makes your beach experience much more fun! From checking if it's a good day to surf or not by giving you the </span>
+            </span>
+          </span>
+          <span style="line-height: 2.0;">
+            <span style="letter-spacing: 1px;">
+              <span style="font-weight: 700;">
+                <span class="u-text-custom-color-6">weather</span>
+              </span>
+            </span>
+          </span>
+          <span style="line-height: 2.0;">
+            <span style="letter-spacing: 1px;">
+              <span class="u-text-custom-color-8"> or to seeing if it's going to be </span>
+            </span>
+          </span>
+          <span style="line-height: 2.0;">
+            <span style="letter-spacing: 1px;">
+              <span style="font-weight: 700;">
+                <span class="u-text-custom-color-6">crowded</span>
+              </span>
+              <span class="u-text-custom-color-6">&nbsp;</span>
+            </span>
+          </span>
+          <span style="line-height: 2.0;">
+            <span style="letter-spacing: 1px;">
+              <span class="u-text-custom-color-8">or not. We have got you covered! To forward the mission of cleaning the shores and making it a pleasant experience for everyone while caring for our planet Earth- This app has it's own </span>
+            </span>
+          </span>
+          <span style="line-height: 2.0;">
+            <span style="letter-spacing: 1px; font-weight: 700;">
+              <span class="u-text-custom-color-6">Garbage Classifier</span>
+            </span>
+          </span>
+          <span style="line-height: 2.0;">
+            <span style="letter-spacing: 1px;">
+              <span class="u-text-custom-color-8">- which categorises waste into Organic or Recyclable, for efficient waste management. We also introduce your very own personal assistant-</span>
+            </span>
+          </span>
+          <span style="line-height: 2.0;">
+            <span style="letter-spacing: 1px; font-weight: 700;">
+              <span class="u-text-custom-color-6">&nbsp;Alex!</span>
+            </span>
+          </span>
+          <span style="line-height: 2.0;">
+            <span style="letter-spacing: 1px;">
+              <span class="u-text-custom-color-8"> which gives you helpful resources such as contacts of Police, Ambulance, Nearby Lifeguards and even the fun stuff such as Nearby Restaurants!</span>
+            </span>
+          </span>
+        </p>
+        <p style="text-align: left;">
+          <span style="letter-spacing: 1px;">
+            <br>
+          </span>
+        </p>
+        <p style="text-align: right;">
+          <span style="line-height: 2.0;">
+            <span style="letter-spacing: 1px;">
+              <span class="u-text-custom-color-8">This was supposed to be an Android App but due to time constraints and the lack of skillset we made our hack into a Web-App that can be used on all devices such as </span>
+            </span>
+          </span>
+          <span style="line-height: 2.0;">
+            <span style="letter-spacing: 1px; font-weight: 700;">
+              <span class="u-text-custom-color-6">Phones, Desktop, Laptop, Tablets</span>
+            </span>
+          </span>
+          <span style="line-height: 2.0;">
+            <span style="letter-spacing: 1px;">
+              <span class="u-text-custom-color-8"> etc. We plan to work on this project further in future</span>
+            </span>
+            <span style="letter-spacing: 2px;">
+              <span class="u-text-custom-color-8">.</span>&nbsp;
+            </span>&nbsp;
+          </span>
+        </p>
+        <p style="text-align: center;">
+          <br>
+        </p>
+        <p style="text-align: left;">
+          <br>
+        </p>
+      </div>
+      <img class="u-image u-image-default u-image-1" src="{{ url_for('static', filename = 'images/g6606db1c3a4b16ecb0191ea5c220b69bd6aecb88e5e2954bfde614295b7b173d1104353d0d8880b493a0af8ecbe12829_1280.jpg') }}" alt="" data-image-width="1280" data-image-height="853">
+      <ul class="u-align-left u-custom-list u-text u-text-custom-color-8 u-text-2">
+        <li>
+          <div class="u-list-icon u-text-custom-color-6">
+            <svg class="u-svg-content" viewBox="0 0 512.008 512.008" id="svg-9805">
+              <path
+                d="m507.904 245.317-163.296-181.408c-2.848-3.168-6.848-5.056-11.072-5.28-4.352-.288-8.384 1.248-11.552 4.096l-47.552 42.784c-6.56 5.92-7.072 16.032-1.184 22.592l71.904 79.904h-329.152c-8.832 0-16 7.168-16 16v64c0 8.832 7.168 16 16 16h329.152l-71.904 79.872c-5.92 6.592-5.376 16.672 1.184 22.624l47.552 42.816c3.072 2.752 6.912 4.096 10.72 4.096 4.384 0 8.704-1.792 11.904-5.28l163.296-181.408c5.472-6.08 5.472-15.328 0-21.408z"
+                fill="currentColor"></path>
+            </svg>
+          </div>Creating an Android App. The prototype can be viewed <a href="#sec-a490" data-page-id="450655"
+            class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-custom-color-6 u-text-hover-palette-3-dark-1 u-btn-1">here</a>
+        </li>
+        <li>
+          <div class="u-list-icon u-text-custom-color-6">
+            <svg class="u-svg-content" viewBox="0 0 512.008 512.008" id="svg-9805">
+              <path
+                d="m507.904 245.317-163.296-181.408c-2.848-3.168-6.848-5.056-11.072-5.28-4.352-.288-8.384 1.248-11.552 4.096l-47.552 42.784c-6.56 5.92-7.072 16.032-1.184 22.592l71.904 79.904h-329.152c-8.832 0-16 7.168-16 16v64c0 8.832 7.168 16 16 16h329.152l-71.904 79.872c-5.92 6.592-5.376 16.672 1.184 22.624l47.552 42.816c3.072 2.752 6.912 4.096 10.72 4.096 4.384 0 8.704-1.792 11.904-5.28l163.296-181.408c5.472-6.08 5.472-15.328 0-21.408z"
+                fill="currentColor"></path>
+            </svg>
+          </div>Making design changes for better user experience and overall aesthetics
+        </li>
+        <li>
+          <div class="u-list-icon u-text-custom-color-6">
+            <svg class="u-svg-content" viewBox="0 0 512.008 512.008" id="svg-9805">
+              <path
+                d="m507.904 245.317-163.296-181.408c-2.848-3.168-6.848-5.056-11.072-5.28-4.352-.288-8.384 1.248-11.552 4.096l-47.552 42.784c-6.56 5.92-7.072 16.032-1.184 22.592l71.904 79.904h-329.152c-8.832 0-16 7.168-16 16v64c0 8.832 7.168 16 16 16h329.152l-71.904 79.872c-5.92 6.592-5.376 16.672 1.184 22.624l47.552 42.816c3.072 2.752 6.912 4.096 10.72 4.096 4.384 0 8.704-1.792 11.904-5.28l163.296-181.408c5.472-6.08 5.472-15.328 0-21.408z"
+                fill="currentColor"></path>
+            </svg>
+          </div>Optimize the loading times of our Web-App
+        </li>
+        <li>
+          <div class="u-list-icon u-text-custom-color-6">
+            <svg class="u-svg-content" viewBox="0 0 512.008 512.008" id="svg-9805">
+              <path
+                d="m507.904 245.317-163.296-181.408c-2.848-3.168-6.848-5.056-11.072-5.28-4.352-.288-8.384 1.248-11.552 4.096l-47.552 42.784c-6.56 5.92-7.072 16.032-1.184 22.592l71.904 79.904h-329.152c-8.832 0-16 7.168-16 16v64c0 8.832 7.168 16 16 16h329.152l-71.904 79.872c-5.92 6.592-5.376 16.672 1.184 22.624l47.552 42.816c3.072 2.752 6.912 4.096 10.72 4.096 4.384 0 8.704-1.792 11.904-5.28l163.296-181.408c5.472-6.08 5.472-15.328 0-21.408z"
+                fill="currentColor"></path>
+            </svg>
+          </div>Integrating multiple features into one for better utility
+        </li>
+      </ul>
+      <h4 class="u-text u-text-custom-color-6 u-text-3">Our Future Goals include- </h4>
+    </div>
+  </section>
+  <section class="u-align-center u-clearfix u-gradient u-section-3" id="sec-4657">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <h1 class="u-text u-text-custom-color-6 u-text-default u-text-1">About Us</h1>
+      <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+        <div class="u-layout" style="">
+          <div class="u-layout-row" style="">
+            <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-1">
+              <div class="u-container-layout u-valign-top u-container-layout-1">
+                <img class="u-image u-image-default u-preserve-proportions u-image-1" src="{{ url_for('static', filename = 'images/linkedindp.jpg') }}" alt="" data-image-width="460" data-image-height="460">
+                <h4 class="u-text u-text-custom-color-6 u-text-2">Satvik Singh</h4>
+                <h6 class="u-text u-text-3">National Institute of Technology, Surathkal</h6>
+                <p class="u-align-left u-text u-text-custom-color-8 u-text-4">Worked on the design of the web-app. Created the front-end. Integrated the backend.&nbsp;</p>
+              </div>
+            </div>
+            <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-2">
+              <div class="u-container-layout u-container-layout-2">
+                <img class="u-image u-image-default u-preserve-proportions u-image-2" src="{{ url_for('static', filename = 'images/60786451.jpg') }}" alt="" data-image-width="336" data-image-height="336">
+                <h4 class="u-text u-text-custom-color-6 u-text-5">Keerthana B</h4>
+                <h6 class="u-text u-text-6">Sri M Visvevaraya Institute of Technology</h6>
+                <p class="u-text u-text-custom-color-8 u-text-7">Worked on the design of the hack and the prototype. Created and implemented the chatbot.</p>
+              </div>
+            </div>
+            <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-3">
+              <div class="u-container-layout u-valign-top u-container-layout-3">
+                <img class="u-image u-image-default u-image-3" src="{{ url_for('static', filename = 'images/abhishek.jpg') }}" alt="" data-image-width="633" data-image-height="634">
+                <h4 class="u-text u-text-custom-color-6 u-text-8">Abhishek Chaudhary</h4>
+                <h6 class="u-text u-text-9">Indian Institute of Technology, Jammu</h6>
+                <p class="u-text u-text-custom-color-8 u-text-10">Created the backend. Integrated the back-end with front-end. Deployed the web-app to platform.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="u-clearfix u-footer u-gradient u-footer" id="sec-ea37">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <div class="u-clearfix u-expanded-width-lg u-expanded-width-md u-expanded-width-xl u-expanded-width-xs u-gutter-30 u-layout-wrap u-layout-wrap-1">
+        <div class="u-gutter-0 u-layout">
+          <div class="u-layout-row">
+            <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-60 u-layout-cell-1">
+              <div class="u-container-layout u-container-layout-1">
+                <h6 class="u-text u-text-custom-color-6 u-text-1">2021 SurfMate</h6>
+                <p class="u-small-text u-text u-text-custom-color-6 u-text-2">This project is still under construction</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-social-icons u-spacing-10 u-social-icons-1">
+        <a class="u-social-url" target="_blank" href=""><span class="u-icon u-icon-circle u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112.2 112.2" style="undefined">
+              <use xlink:href="#svg-ccca"></use>
+            </svg><svg x="0px" y="0px" viewBox="0 0 112.2 112.2" enable-background="new 0 0 112.2 112.2" xml:space="preserve" id="svg-ccca" class="u-svg-content">
+              <path d="M75.5,28.8H65.4c-1.5,0-4,0.9-4,4.3v9.4h13.9l-1.5,15.8H61.4v45.1H42.8V58.3h-8.8V42.4h8.8V32.2 c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path>
+            </svg></span>
+        </a>
+        <a class="u-social-url" target="_blank" href=""><span class="u-icon u-icon-circle u-social-icon u-social-twitter u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112.2 112.2" style="undefined">
+              <use xlink:href="#svg-5866"></use>
+            </svg><svg x="0px" y="0px" viewBox="0 0 112.2 112.2" enable-background="new 0 0 112.2 112.2" xml:space="preserve" id="svg-5866" class="u-svg-content">
+              <path
+                d="M92.2,38.2c0,0.8,0,1.6,0,2.3c0,24.3-18.6,52.4-52.6,52.4c-10.6,0.1-20.2-2.9-28.5-8.2 c1.4,0.2,2.9,0.2,4.4,0.2c8.7,0,16.7-2.9,23-7.9c-8.1-0.2-14.9-5.5-17.3-12.8c1.1,0.2,2.4,0.2,3.4,0.2c1.6,0,3.3-0.2,4.8-0.7 c-8.4-1.6-14.9-9.2-14.9-18c0-0.2,0-0.2,0-0.2c2.5,1.4,5.4,2.2,8.4,2.3c-5-3.3-8.3-8.9-8.3-15.4c0-3.4,1-6.5,2.5-9.2 c9.1,11.1,22.7,18.5,38,19.2c-0.2-1.4-0.4-2.8-0.4-4.3c0.1-10,8.3-18.2,18.5-18.2c5.4,0,10.1,2.2,13.5,5.7c4.3-0.8,8.1-2.3,11.7-4.5 c-1.4,4.3-4.3,7.9-8.1,10.1c3.7-0.4,7.3-1.4,10.6-2.9C98.9,32.3,95.7,35.5,92.2,38.2z">
+              </path>
+            </svg></span>
+        </a>
+        <a class="u-social-url" target="_blank" href=""><span class="u-icon u-icon-circle u-social-icon u-social-instagram u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112.2 112.2" style="undefined">
+              <use xlink:href="#svg-a39c"></use>
+            </svg><svg x="0px" y="0px" viewBox="0 0 112.2 112.2" enable-background="new 0 0 112.2 112.2" xml:space="preserve" id="svg-a39c" class="u-svg-content">
+              <path d="M55.9,32.9c-12.8,0-23.2,10.4-23.2,23.2s10.4,23.2,23.2,23.2s23.2-10.4,23.2-23.2S68.7,32.9,55.9,32.9z M55.9,69.4c-7.4,0-13.3-6-13.3-13.3c-0.1-7.4,6-13.3,13.3-13.3s13.3,6,13.3,13.3C69.3,63.5,63.3,69.4,55.9,69.4z"></path>
+              <path d="M79.7,26.8c-3,0-5.4,2.5-5.4,5.4s2.5,5.4,5.4,5.4c3,0,5.4-2.5,5.4-5.4S82.7,26.8,79.7,26.8z"></path>
+              <path
+                d="M78.2,11H33.5C21,11,10.8,21.3,10.8,33.7v44.7c0,12.6,10.2,22.8,22.7,22.8h44.7c12.6,0,22.7-10.2,22.7-22.7 V33.7C100.8,21.1,90.6,11,78.2,11z M91,78.4c0,7.1-5.8,12.8-12.8,12.8H33.5c-7.1,0-12.8-5.8-12.8-12.8V33.7 c0-7.1,5.8-12.8,12.8-12.8h44.7c7.1,0,12.8,5.8,12.8,12.8V78.4z">
+              </path>
+            </svg></span>
+        </a>
+        <a class="u-social-url" target="_blank" href=""><span class="u-icon u-icon-circle u-social-icon u-social-linkedin u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112.2 112.2" style="undefined">
+              <use xlink:href="#svg-f4f0"></use>
+            </svg><svg x="0px" y="0px" viewBox="0 0 112.2 112.2" enable-background="new 0 0 112.2 112.2" xml:space="preserve" id="svg-f4f0" class="u-svg-content">
+              <path
+                d="M33.8,96.8H14.5v-58h19.3V96.8z M24.1,30.9L24.1,30.9c-6.6,0-10.8-4.5-10.8-10.1c0-5.8,4.3-10.1,10.9-10.1 S34.9,15,35.1,20.8C35.1,26.4,30.8,30.9,24.1,30.9z M103.3,96.8H84.1v-31c0-7.8-2.7-13.1-9.8-13.1c-5.3,0-8.5,3.6-9.9,7.1 c-0.6,1.3-0.6,3-0.6,4.8V97H44.5c0,0,0.3-52.6,0-58h19.3v8.2c2.6-3.9,7.2-9.6,17.4-9.6c12.7,0,22.2,8.4,22.2,26.1V96.8z">
+              </path>
+            </svg></span>
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>

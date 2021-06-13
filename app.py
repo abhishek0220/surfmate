@@ -13,8 +13,7 @@ app = Flask(__name__)
 
 limiter = Limiter(
     app,
-    key_func=get_remote_address,
-    default_limits=["2 per second", "120 per hour"]
+    key_func=get_remote_address
 )
 
 
@@ -23,7 +22,18 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/Features/')
+def features():
+    return render_template('features.html')
+
+
+@app.route('/Chat/')
+def chat():
+    return render_template('chat.html')
+
+
 @app.route('/ClassifyImage/', methods=['GET', 'POST'])
+@limiter.limit("1/second;20/hour", methods=['POST'])
 def classify_image():
     if request.method == 'GET':
         return render_template('select_img.html')
@@ -39,6 +49,7 @@ def classify_image():
 
 
 @app.route('/NearbyBeaches/', methods=['GET', 'POST'])
+@limiter.limit("1/second;20/hour", methods=['POST'])
 def beaches():
     if request.method == 'GET':
         return render_template('beaches.html')
