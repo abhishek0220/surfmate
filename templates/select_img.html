@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en">
 
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
@@ -26,6 +27,19 @@
   <meta property="og:title" content="findBeach">
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#0d13c3">
+  <style>
+#container {
+    margin: 0px auto;
+    width: 500px;
+    height: 375px;
+    border: 10px #333 solid;
+}
+#videoElement {
+    width: 500px;
+    height: 375px;
+    background-color: #666;
+}
+</style>
 </head>
 
 <body class="u-body">
@@ -33,6 +47,28 @@
     <section class="u-align-left u-clearfix u-gradient u-section-1" id="sec-6c66">
     <div class="u-clearfix u-sheet u-sheet-1">
       {% if not resp %}
+      <div id="container">
+    <video autoplay="true" id="videoElement"></video>
+</div>
+<script>
+
+var video = document.querySelector("#videoElement");
+ 
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+ 
+if (navigator.getUserMedia) {       
+    navigator.getUserMedia({video: true}, handleVideo, videoError);
+}
+ 
+function handleVideo(stream) {
+    video.src = window.URL.createObjectURL(stream);
+}
+ 
+function videoError(e) {
+    // do something
+}
+ 
+</script>
         <form method="post" enctype="multipart/form-data">
         <label for="image">Select Image</label>
         <input name="image" id="image" type="file" accept="image/*" required>
